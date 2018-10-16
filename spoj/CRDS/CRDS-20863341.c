@@ -50,8 +50,13 @@ void solve() {
         cin>>n;
         ll res = (3 * n * (n+1))/2;
         res -= n;
-        res%=m;
-        cout<<res<<endl;
+        res = max(res, 0);
+        if(res == 0) {
+            cout << 0 << endl;
+        } else {
+            res%=m;
+            cout << res << endl;
+        }
     }
 }
 
